@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SquareMovmentScript : MonoBehaviour
+public class SquareBodyScript : MonoBehaviour
 {
     public Rigidbody2D SquareBody;
     public float CharacterStamina = 2f;
@@ -64,6 +64,11 @@ public class SquareMovmentScript : MonoBehaviour
         CharacterStamina = Mathf.Clamp(CharacterStamina, 0f, 2f);
 
         SquareBody.linearVelocity = new Vector2(moveX, moveY) * moveSpeed * movementMultiplier;
+
+
+
+
+
 
 
     }
