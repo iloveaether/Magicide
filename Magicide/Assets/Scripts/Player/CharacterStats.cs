@@ -1,8 +1,16 @@
 using UnityEngine;
 
-// Contains information about a player's stats
+// Contains information about a player's character stats
 public class PlayerStats : MonoBehaviour
 {
+	// How much mana the player has
+	[SerializeField]
+	private float maxMana = 0;
+
+	// How much health the player has
+	[SerializeField]
+	private float maxHealth = 0;
+
 	// How fast a player can move in a direction
 	[SerializeField]
 	private float moveSpeed = 5f;
