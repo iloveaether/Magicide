@@ -52,6 +52,7 @@ namespace Spell
         // Casts the spell
         void Cast()
         { 
+            //Essentially just create a projectile with hurt box, player manager will handle damage and player based effects.
         }
 
 		void ISpell.Cast()
