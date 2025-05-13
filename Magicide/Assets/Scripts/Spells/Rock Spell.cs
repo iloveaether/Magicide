@@ -1,36 +1,62 @@
 using UnityEngine;
 
-namespace Spell;
-
-public class RockSpell
+namespace Spell
 {
-    //NAME YOU DUMB FUCK
-    string Name { get => name; }
-    private string name = "Rock Spell";
 
-    // Damage of the spell
-    float Damage { get => damage; }
-    private float damage = 20f;
+    public class RockSpell : ISpell
+    {
+        //NAME YOU DUMB FUCK
+        private string name = "Rock Spell";
 
-    // Amount of mana consumed when cast
-    float ManaCost { get => manaCost; }
-    private float manaCost = 10f;
+        // Damage of the spell
+        private float damage = 20f;
 
-    // Amount of time before you can cast again
-    float CastTime { get => castTime; }
-    private float castTime = 2f;
+        // Amount of mana consumed when cast
+        private float manaCost = 10f;
 
-    // Is spell an area of affect spell
-    bool IsAreaOfAffect { get => isAreaOfAffect; }
-    bool isAreaOfAffect = false;
+        // Amount of time before you can cast again
+        private float castTime = 2f;
 
-    // The spell type of spell
-    SpellType Type { get => type; }
-    SpellType type = Earth;
+        // Is spell an area of affect spell
+        bool isAreaOfAffect = false;
 
-    // NOTE: Maybe add casting wand to properties
+        // The spell type of spell
+        SpellType Type { get => type; }
 
-    // Casts the spell
-    void Cast();
+		public string Name => name;
+
+		public float Damage => damage;
+
+		public float ManaCost => manaCost;
+
+		public float CastTime => castTime;
+
+		public bool IsAreaOfAffect => isAreaOfAffect;
+
+		string ISpell.Name => name;
+
+		float ISpell.Damage => damage;
+
+		float ISpell.ManaCost => manaCost;
+
+		float ISpell.CastTime => castTime;
+
+		bool ISpell.IsAreaOfAffect => isAreaOfAffect;
+
+		SpellType ISpell.Type => Type;
+
+		SpellType type = SpellType.Earth;
+
+        // NOTE: Maybe add casting wand to properties
+
+        // Casts the spell
+        void Cast()
+        { 
+        }
+
+		void ISpell.Cast()
+		{
+			Cast();
+		}
+	}
 }
-
