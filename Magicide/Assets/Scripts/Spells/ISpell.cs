@@ -22,6 +22,9 @@ namespace Spell
     // A reference class for all spells
     public interface ISpell
     {
+        //NAME YOU DUMB FUCK
+        string Name { get; }
+
         // Damage of the spell
         float Damage { get; }
 
@@ -42,4 +45,5 @@ namespace Spell
         // Casts the spell
         void Cast();
     }
+
 }
