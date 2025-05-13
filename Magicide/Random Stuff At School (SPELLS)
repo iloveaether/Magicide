@@ -1,0 +1,197 @@
+// Fire Spell Script
+// ----------------------------------------------------------------------------------------------------------------------
+using UnityEngine;
+
+namespace Spell
+{
+
+    public class FireBallSpell : ISpell
+    {
+        //NAME YOU DUMB FUCK
+        private string name = "FireBall Spell";
+
+        // Damage of the spell
+        private float damage = 10f;
+
+        // Amount of mana consumed when cast
+        private float manaCost = 20f;
+
+        // Amount of time before you can cast again
+        private float castTime = 1f;
+
+        // Is spell an area of affect spell
+        bool isAreaOfAffect = true;
+
+        // The spell type of spell
+		SpellType type = SpellType.Fire;
+
+		public string Name => name;
+
+		public float Damage => damage;
+
+		public float ManaCost => manaCost;
+
+		public float CastTime => castTime;
+
+		public bool IsAreaOfAffect => isAreaOfAffect;
+
+		string ISpell.Name => name;
+
+		float ISpell.Damage => damage;
+
+		float ISpell.ManaCost => manaCost;
+
+		float ISpell.CastTime => castTime;
+
+		bool ISpell.IsAreaOfAffect => isAreaOfAffect;
+
+		SpellType Type { get => type; }
+
+        // NOTE: Maybe add casting wand to properties
+
+        // Casts the spell
+        void Cast()
+        { 
+            //Essentially just create a projectile with hurt box, player manager will handle damage and player based effects.
+        }
+
+		void ISpell.Cast()
+		{
+			Cast();
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+// Water Splash Spell
+
+// ----------------------------------------------------------------------------------------------------------------------
+using UnityEngine;
+
+namespace Spell
+{
+
+    public class WaterSplashSpell : ISpell
+    {
+        //NAME YOU DUMB FUCK
+        private string name = "WaterSplash Spell";
+
+        // Damage of the spell
+        private float damage = 15f;
+
+        // Amount of mana consumed when cast
+        private float manaCost = 20f;
+
+        // Amount of time before you can cast again
+        private float castTime = 1f;
+
+        // Is spell an area of affect spell
+        bool isAreaOfAffect = true;
+
+        // The spell type of spell
+		SpellType type = SpellType.Water;
+
+		public string Name => name;
+
+		public float Damage => damage;
+
+		public float ManaCost => manaCost;
+
+		public float CastTime => castTime;
+
+		public bool IsAreaOfAffect => isAreaOfAffect;
+
+		string ISpell.Name => name;
+
+		float ISpell.Damage => damage;
+
+		float ISpell.ManaCost => manaCost;
+
+		float ISpell.CastTime => castTime;
+
+		bool ISpell.IsAreaOfAffect => isAreaOfAffect;
+
+		SpellType Type { get => type; }
+
+        // NOTE: Maybe add casting wand to properties
+
+        // Casts the spell
+        void Cast()
+        { 
+            //Essentially just create a projectile with hurt box, player manager will handle damage and player based effects.
+            //Not sure where to implement this but assuming we have a fire object which hurts you when you step on it, this could also put that out
+        }
+
+		void ISpell.Cast()
+		{
+			Cast();
+		}
+	}
+}
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+//Three Lightning Bolt Spell
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+namespace Spell
+{
+
+    public class TriLightningSpell : ISpell
+    {
+        //NAME YOU DUMB FUCK
+        private string name = "Three Lightning Bolt Spell";
+
+        // Damage of the spell
+        private float damage = 10f;
+
+        // Amount of mana consumed when cast
+        private float manaCost = 20f;
+
+        // Amount of time before you can cast again
+        private float castTime = 3f;
+
+        // Is spell an area of affect spell
+        bool isAreaOfAffect = false;
+
+        // The spell type of spell
+		SpellType type = SpellType.Lightning;
+
+		public string Name => name;
+
+		public float Damage => damage;
+
+		public float ManaCost => manaCost;
+
+		public float CastTime => castTime;
+
+		public bool IsAreaOfAffect => isAreaOfAffect;
+
+		string ISpell.Name => name;
+
+		float ISpell.Damage => damage;
+
+		float ISpell.ManaCost => manaCost;
+
+		float ISpell.CastTime => castTime;
+
+		bool ISpell.IsAreaOfAffect => isAreaOfAffect;
+
+		SpellType Type { get => type; }
+
+        // NOTE: Maybe add casting wand to properties
+
+        // Casts the spell
+        void Cast()
+        { 
+            //Essentially just create a projectile with hurt box, player manager will handle damage and player based effects.
+        }
+
+		void ISpell.Cast()
+		{
+			Cast();
+		}
+	}
+}
