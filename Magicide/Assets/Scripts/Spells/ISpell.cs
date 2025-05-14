@@ -23,27 +23,26 @@ namespace Spell
     public interface ISpell
     {
         //NAME YOU DUMB FUCK
-        string Name { get; }
+        public string Name { get; }
 
-        // Damage of the spell
-        float Damage { get; }
+		// Damage of the spell
+		public float Damage { get; }
 
-        // Amount of mana consumed when cast
-        float ManaCost { get; }
+		// Amount of mana consumed when cast
+		public float ManaCost { get; }
 
-        // Amount of time taken when casting
-        float CastTime { get; }
+		// Amount of time before casting again
+		public float Cooldown { get; }
 
-        // Is spell an area of affect spell
-        bool IsAreaOfAffect { get; }
+		// Is spell an area of effect spell
+		public bool IsAreaOfEffect { get; }
 
-        // The spell type of spell
-        SpellType Type { get; }
+		// The spell type of spell
+		public SpellType Type { get; }
 
-        // NOTE: Maybe add casting wand to properties
+		// NOTE: Maybe add casting wand to properties
 
-        // Casts the spell
-        void Cast();
+		// Casts the spell
+		public void Cast();
     }
-
 }
