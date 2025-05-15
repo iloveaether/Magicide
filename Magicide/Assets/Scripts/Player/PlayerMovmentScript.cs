@@ -75,6 +75,12 @@ public class PlayerMovmentScript : MonoBehaviour
 		// Keep stamina between max stamina and 0
 		characterStamina = Mathf.Clamp(characterStamina, 0f, playerStats.MaxStamina);
 
+		if (playerMove != Vector2.zero)
+		{
+			// Normalize speed of the player to prevent them from moving twice as fast diagonal
+			playerMove.Normalize();
+		}
+
 		// apply movement
 		playerBody.linearVelocity = playerMove * playerStats.MoveSpeed * movementMultiplier;
 	}
