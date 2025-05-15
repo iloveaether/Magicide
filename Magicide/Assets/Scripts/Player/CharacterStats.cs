@@ -1,8 +1,17 @@
 using UnityEngine;
 
 // Contains information about a player's character stats
-public class PlayerStats : MonoBehaviour
+public class CharacterStats
 {
+	// blank spell inventory for player
+	public Spell.SpellBase spell1 = null;
+
+	public Spell.SpellBase spell2 = null;
+
+	public Spell.SpellBase spell3 = null;
+
+	public Spell.SpellBase spell4 = null;
+
 	// How much mana the player has
 	[SerializeField]
 	private float maxMana = 0;
@@ -38,6 +47,8 @@ public class PlayerStats : MonoBehaviour
 	public float MoveSpeed{ get => moveSpeed; }
 	public float SprintMultiplier { get => sprintMultiplier; }
 	public float TiredSpeedMultiplier { get => tiredSpeedMultiplier; }
+	public float MaxHealth {  get => maxHealth; }
+	public float MaxMana { get => maxMana; }
 	public float MaxStamina { get => maxStamina; }
 	public float StaminaConsumptionRate { get => staminaConsumptionRate; }
 	public float StaminaRechargeRate { get => staminaRechargeRate; }
