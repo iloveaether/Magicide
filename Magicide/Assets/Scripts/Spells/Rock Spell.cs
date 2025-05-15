@@ -6,7 +6,8 @@ namespace Spell
     public class RockSpell : SpellBase
     {
         public RockSpell() : base(name: "Rock Spell", cooldown: 2f, isAreaOfEffect: false, damage: 20f, manaCost: 10f, type: SpellType.Earth, null)
-        {}
+        {
+        }
 
         // NOTE: Maybe add casting wand to properties
 

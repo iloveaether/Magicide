@@ -24,10 +24,19 @@ public class PlayerMovmentScript : MonoBehaviour
 	void Start()
 	{
 		playerBody = GetComponent<Rigidbody2D>(); // get the rigidbody of the gameobject this script is attached to
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+		playerStats = GetComponent<PlayerStats>(); // get the player stats of the gameobject this script is attached to
+        Physics2D.gravity = new Vector2(1f, 2f);
+    }
+=======
+>>>>>>> Stashed changes
 		playerManager = GetComponent<PlayerManager>(); // get the player stats of the gameobject this script is attached to
 
         characterStats = playerManager.characterStats;
 	}
+>>>>>>> bcd003d4f34d368fe0236a6878406bb7eebd6d1f
 
 	// Update is called once per frame
 	void Update()
@@ -77,6 +86,12 @@ public class PlayerMovmentScript : MonoBehaviour
 
 		// Keep stamina between max stamina and 0
 		characterStamina = Mathf.Clamp(characterStamina, 0f, characterStats.MaxStamina);
+
+		if (playerMove != Vector2.zero)
+		{
+			// Normalize speed of the player to prevent them from moving twice as fast diagonal
+			playerMove.Normalize();
+		}
 
 		// apply movement
 		playerBody.linearVelocity = playerMove * playerManager.current_move_speed * movementMultiplier;
