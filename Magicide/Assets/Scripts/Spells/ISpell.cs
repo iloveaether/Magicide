@@ -15,7 +15,7 @@ namespace Spell
         Time,
         Shadow,
         Light,
-        Heal
+        Flesh
     }
 
     // Interfaces: https://www.w3schools.com/cs/cs_interface.php

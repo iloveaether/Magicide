@@ -1470,7 +1470,6 @@ GameObject:
   - component: {fileID: 1782545766}
   - component: {fileID: 1782545765}
   - component: {fileID: 1782545764}
-  - component: {fileID: 1782545767}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1562,7 +1561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2893a1879c24bae418ebe61b1b5f7c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBody: {fileID: 0}
 --- !u!50 &1782545765
 Rigidbody2D:
   serializedVersion: 5
@@ -1636,26 +1634,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.94, y: 0.94}
   m_EdgeRadius: 0
---- !u!114 &1782545767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782545761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26968aa0a63cb224c8d872b67c211f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxMana: 0
-  maxHealth: 0
-  moveSpeed: 5
-  sprintMultiplier: 2
-  tiredSpeedMultiplier: 0.75
-  maxStamina: 2
-  staminaConsumptionRate: 0.5
-  staminaRechargeRate: 0.75
 --- !u!1 &1788718186
 GameObject:
   m_ObjectHideFlags: 0
