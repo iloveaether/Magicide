@@ -11,7 +11,6 @@ public class PlayerMovmentScript : MonoBehaviour
 	// The Player's rigidbody
 	public Rigidbody2D playerBody;
 
-	private CharacterStats characterStats;
 	// reference to the player manager
 	private PlayerManager playerManager;
 
@@ -25,15 +24,13 @@ public class PlayerMovmentScript : MonoBehaviour
 	{
 		playerBody = GetComponent<Rigidbody2D>(); // get the rigidbody of the gameobject this script is attached to
 		playerManager = GetComponent<PlayerManager>(); // get the player stats of the gameobject this script is attached to
-
-        characterStats = playerManager.characterStats;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		Vector2 playerMove = Vector2.zero; // start inputs at zero
-		float movementMultiplier = 1;
+        float movementMultiplier = 1;
 
 		// Use Input.GetAxis to get the player input
 		// This allows the player to change their keybinds later on, or use a controller
@@ -52,8 +49,8 @@ public class PlayerMovmentScript : MonoBehaviour
 		{
 			if (characterStamina > 0f && isTired == false)
 			{
-				movementMultiplier = characterStats.SprintMultiplier;
-				characterStamina -= characterStats.StaminaConsumptionRate * Time.deltaTime;
+				movementMultiplier = playerManager.sprintMultiplier;
+				characterStamina -= playerManager.staminaConsumptionRate * Time.deltaTime;
 			}
 			else if (characterStamina == 0f) // become tired when stamina depletes
 			{
@@ -63,20 +60,20 @@ public class PlayerMovmentScript : MonoBehaviour
 		}
 		else
 		{
-			characterStamina += characterStats.StaminaRechargeRate * Time.deltaTime; // recharge stamina when not sprinting
+			characterStamina += playerManager.staminaRechargeRate * Time.deltaTime; // recharge stamina when not sprinting
 
 			// Only check if tired when not running
 			// This allows you to "run" when you're tired, but only at the same speed as walking
 			// However, you will not gain stamina when running while tired
 			if (isTired)
 			{
-				movementMultiplier = characterStats.TiredSpeedMultiplier;
+				movementMultiplier = playerManager.tiredSpeedMultiplier;
 				DivaLog("Slow cause tired");
 			}
 		}
 
 		// Keep stamina between max stamina and 0
-		characterStamina = Mathf.Clamp(characterStamina, 0f, characterStats.MaxStamina);
+		characterStamina = Mathf.Clamp(characterStamina, 0f, playerManager.max_stamina);
 
 		if (playerMove != Vector2.zero)
 		{
@@ -86,5 +83,6 @@ public class PlayerMovmentScript : MonoBehaviour
 
 		// apply movement
 		playerBody.linearVelocity = playerMove * playerManager.current_move_speed * movementMultiplier;
+
 	}
 }

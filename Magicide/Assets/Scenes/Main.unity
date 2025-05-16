@@ -12332,7 +12332,7 @@ Transform:
   m_GameObject: {fileID: 1782545761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.24, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.78, z: 0}
   m_LocalScale: {x: 7.0229316, y: 7.292994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12351,6 +12351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2893a1879c24bae418ebe61b1b5f7c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBody: {fileID: 1782545765}
 --- !u!50 &1782545765
 Rigidbody2D:
   serializedVersion: 5
@@ -12437,7 +12438,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_move_speed: 2
-  current_stamina: 0
+  sprintMultiplier: 1.5
+  tiredSpeedMultiplier: 0.5
+  current_stamina: 20
+  max_stamina: 20
+  staminaRechargeRate: 5
+  staminaConsumptionRate: 5
 --- !u!95 &1782545768
 Animator:
   serializedVersion: 7
