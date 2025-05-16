@@ -9,7 +9,7 @@ public class PlayerMovmentScript : MonoBehaviour
 	private float characterStamina = 2f;
 
 	// The Player's rigidbody
-	private Rigidbody2D playerBody;
+	public Rigidbody2D playerBody;
 
 	private CharacterStats characterStats;
 	// reference to the player manager

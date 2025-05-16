@@ -20,5 +20,6 @@ public class PlayerManager : MonoBehaviour
         current_mana = characterStats.MaxMana;
         current_move_speed = characterStats.MoveSpeed;
         current_stamina = characterStats.MaxStamina;
+        Debug.Log("IM ALIVE (MANAGER)");
     }
 }
