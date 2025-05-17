@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovmentScript : MonoBehaviour
@@ -78,7 +79,9 @@ public class PlayerMovmentScript : MonoBehaviour
 		if (playerMove != Vector2.zero)
 		{
 			// Normalize speed of the player to prevent them from moving twice as fast diagonal
+			var temp = playerMove.Abs();
 			playerMove.Normalize();
+			playerMove.Scale(new Vector2(temp.x, temp.y));
 		}
 
 		// apply movement
