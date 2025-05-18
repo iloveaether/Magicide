@@ -40,6 +40,8 @@ namespace Spell
 		// The spell type of spell
 		public SpellType Type { get; }
 
+        public bool isChargeable {  get; }
+
 		// NOTE: Maybe add casting wand to properties
 
 		// Casts the spell

@@ -26,15 +26,18 @@ namespace Spell
 
 		protected SpellType type;
 
+		protected bool isChargeable;
+
 		string ISpell.Name { get => name; }
 		float ISpell.Damage { get => damage; }
 		float ISpell.ManaCost { get => manaCost; }
 		float ISpell.Cooldown { get => cooldown; }
 		bool ISpell.IsAreaOfEffect { get => isAreaOfEffect; }
 		SpellType ISpell.Type { get => type; }
+		bool ISpell.isChargeable { get => isChargeable; }
 		
 		
-		protected SpellBase(string name, float cooldown, bool isAreaOfEffect, float damage, float manaCost, SpellType type, ISpellEffect[] spellEffects)
+		protected SpellBase(string name, float cooldown, bool isAreaOfEffect, float damage, float manaCost, SpellType type, bool isChargeable, ISpellEffect[] spellEffects)
 		{
 			this.name = name;
 			this.cooldown = cooldown;
@@ -45,6 +48,7 @@ namespace Spell
 			this.type = type;
 			this.spellEffects = spellEffects;
 			this.lastCastTime = 0f;
+			this.isChargeable = isChargeable;
 		}
 
 		public virtual bool CanCast()
