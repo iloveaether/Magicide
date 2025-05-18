@@ -26,7 +26,7 @@ public class MakeTriangleAppearTEST : MonoBehaviour
             GameObject AppearedObject = Instantiate(AppearingObject, AppearingObjectPosition, Quaternion.identity);
 
 
-            AppearedObject.GetComponent<Rigidbody2D>().linearVelocity = playerBody.linearVelocity;
+            AppearedObject.GetComponent<Rigidbody2D>().linearVelocity = (playerBody.linearVelocity) * 2;
             Destroy(AppearedObject, AppearingObjectLifeSpan);
 
         }
