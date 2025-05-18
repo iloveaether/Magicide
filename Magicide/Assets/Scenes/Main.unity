@@ -11429,6 +11429,11 @@ Transform:
   - {fileID: 1060169631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &947710205 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1832241973602223664, guid: e16f1210ad5ae0b42b45a6193a2275cf, type: 3}
+  m_PrefabInstance: {fileID: 318140627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1025024172
 GameObject:
   m_ObjectHideFlags: 0
@@ -11461,7 +11466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AppearingObject: {fileID: 1025024172}
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 947710205}
 --- !u!61 &1025024174
 BoxCollider2D:
   m_ObjectHideFlags: 0
