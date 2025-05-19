@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterStats
 {
 	// blank spell inventory for player
-	public Spell.SpellBase spell1 = null;
+	public Spell.SpellBase spell1 = new Spell.RockSpell();
 
 	public Spell.SpellBase spell2 = null;
 

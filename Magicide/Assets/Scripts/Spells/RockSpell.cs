@@ -8,6 +8,7 @@ namespace Spell
         public RockSpellProjectile rockSpellProjectile;
         public RockSpell() : base(name: "Rock Spell", cooldown: 2f, isAreaOfEffect: false, damage: 20f, manaCost: 10f, type: SpellType.Earth, isChargeable: false, null)
         {
+            rockSpellProjectile = new RockSpellProjectile();
         }
 
         // NOTE: Maybe add casting wand to properties
@@ -15,7 +16,7 @@ namespace Spell
         // Casts the spell
         protected override void OnCast()
         {
-
+            rockSpellProjectile.OnCast();
         }
     }
 }

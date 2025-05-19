@@ -8,6 +8,16 @@ public class RockSpellProjectile : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void OnCast()
+    {
         Vector2 RockObjectPosition = playerBody.position;
 
         GameObject RockedObject = Instantiate(RockObject, RockObjectPosition, Quaternion.identity);
@@ -15,11 +25,5 @@ public class RockSpellProjectile : MonoBehaviour
 
         RockedObject.GetComponent<Rigidbody2D>().linearVelocity = (playerBody.linearVelocity) * 2;
         Destroy(RockedObject, RockObjectLifeSpan);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
