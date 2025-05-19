@@ -18,13 +18,7 @@ namespace Spell
         // Casts the spell
         protected override void OnCast()
         {
-            Vector2 RockObjectPosition = playerBody.position;
 
-            GameObject RockObject = Instantiate(RockObject, RockObjectPosition, Quaternion.identity);
-
-
-            AppearedObject.GetComponent<Rigidbody2D>().linearVelocity = (playerBody.linearVelocity) * 2;
-            Destroy(RockdObject, RockObjectLifeSpan);
         }
     }
 }

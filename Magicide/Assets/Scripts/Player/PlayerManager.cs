@@ -48,4 +48,12 @@ public class PlayerManager : MonoBehaviour
         tiredSpeedMultiplier = characterStats.TiredSpeedMultiplier;
         Debug.Log("IM ALIVE (MANAGER)");
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            spell1.Cast();
+        }
+    }
 }
