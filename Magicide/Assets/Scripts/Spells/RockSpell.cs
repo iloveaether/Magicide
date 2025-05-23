@@ -15,7 +15,7 @@ namespace Spell
         public RockSpell() : base(name: "Rock Spell", cooldown: 2f, isAreaOfEffect: false, damage: 20f, manaCost: 10f, type: SpellType.Earth, isChargeable: false, null)
         {
             rockSpellProjectile = Resources.Load<GameObject>("Spell/RockSpell/RockSpellProjectilePrefab");
-            if (rockSpellProjectile != null)
+            if (rockSpellProjectile == null)
             {
                 Debug.LogError("Failed to load rockSpellProjectile prefab");
             }
