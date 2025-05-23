@@ -45,6 +45,6 @@ namespace Spell
 		// NOTE: Maybe add casting wand to properties
 
 		// Casts the spell
-		public void Cast();
+		public void Cast(GameObject caster);
     }
 }

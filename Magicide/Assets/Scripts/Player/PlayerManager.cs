@@ -53,7 +53,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            spell1.Cast();
+            spell1.Cast(gameObject);
         }
     }
 }

@@ -59,15 +59,15 @@ namespace Spell
 		}
 
 		// This function is called to cast the spell
-		public virtual void Cast()
+		public virtual void Cast(GameObject caster)
 		{
 			if (!CanCast())
 				return;
-			OnCast();
+			OnCast(caster);
 			lastCastTime = Time.time;
 		}
 
 		// The stuff that actually casts it
-		protected abstract void OnCast();
+		protected abstract void OnCast(GameObject caster);
 	}
 }
