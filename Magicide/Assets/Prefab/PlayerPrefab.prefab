@@ -165,7 +165,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1548950193336330266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,13 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ded198188944834bb1e1e338a152adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_move_speed: 2
-  sprintMultiplier: 1.5
-  tiredSpeedMultiplier: 0.5
-  current_stamina: 20
-  max_stamina: 20
-  staminaRechargeRate: 5
-  staminaConsumptionRate: 5
 --- !u!95 &7203006167856879342
 Animator:
   serializedVersion: 7

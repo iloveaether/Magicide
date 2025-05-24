@@ -50,8 +50,8 @@ public class PlayerMovmentScript : MonoBehaviour
 		{
 			if (characterStamina > 0f && isTired == false)
 			{
-				movementMultiplier = playerManager.sprintMultiplier;
-				characterStamina -= playerManager.staminaConsumptionRate * Time.deltaTime;
+				movementMultiplier = playerManager.SprintMultiplier;
+				characterStamina -= playerManager.StaminaConsumptionRate * Time.deltaTime;
 			}
 			else if (characterStamina == 0f) // become tired when stamina depletes
 			{
@@ -61,20 +61,20 @@ public class PlayerMovmentScript : MonoBehaviour
 		}
 		else
 		{
-			characterStamina += playerManager.staminaRechargeRate * Time.deltaTime; // recharge stamina when not sprinting
+			characterStamina += playerManager.StaminaRechargeRate * Time.deltaTime; // recharge stamina when not sprinting
 
 			// Only check if tired when not running
 			// This allows you to "run" when you're tired, but only at the same speed as walking
 			// However, you will not gain stamina when running while tired
 			if (isTired)
 			{
-				movementMultiplier = playerManager.tiredSpeedMultiplier;
+				movementMultiplier = playerManager.TiredSpeedMultiplier;
 				DivaLog("Slow cause tired");
 			}
 		}
 
 		// Keep stamina between max stamina and 0
-		characterStamina = Mathf.Clamp(characterStamina, 0f, playerManager.max_stamina);
+		characterStamina = Mathf.Clamp(characterStamina, 0f, playerManager.Max_stamina);
 
 		if (playerMove != Vector2.zero)
 		{
@@ -85,7 +85,7 @@ public class PlayerMovmentScript : MonoBehaviour
 		}
 
 		// apply movement
-		playerBody.linearVelocity = playerMove * playerManager.current_move_speed * movementMultiplier;
+		playerBody.linearVelocity = playerMove * playerManager.Current_move_speed * movementMultiplier;
 
 	}
 }

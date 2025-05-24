@@ -175,6 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e78dc347d414214599ac970d5efb504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RockObject: {fileID: 0}
-  playerBody: {fileID: 0}
+  caster: {fileID: 0}
   RockObjectLifeSpan: 2

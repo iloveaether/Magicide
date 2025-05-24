@@ -29,9 +29,10 @@ namespace Spell
             Vector2 casterPos = caster.GetComponent<Transform>().position;
 
 			GameObject instance = GameObject.Instantiate(rockSpellProjectile);
+            instance.GetComponent<RockSpellProjectile>().caster = caster;
             instance.GetComponent<Transform>().position = casterPos;
 
-            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = mouse - casterPos;
 
             instance.GetComponent<Rigidbody2D>().linearVelocity = direction.normalized * projectileSpeed;
